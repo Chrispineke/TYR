@@ -1,0 +1,28 @@
+:root {
+    --primary: #00f2ff;
+    --bg: #000510;
+    --accent: #ff0055;
+    --glass: rgba(0, 242, 255, 0.05);
+}
+
+body, html { margin: 0; background: var(--bg); color: var(--primary); font-family: 'Courier New', monospace; height: 100vh; overflow: hidden; }
+.hidden { display: none !important; }
+.screen-state { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+/* Watermark */
+.watermark { position: fixed; bottom: 20px; right: 40px; font-size: 6vw; font-weight: 900; color: rgba(0, 242, 255, 0.03); z-index: 0; pointer-events: none; }
+
+/* Components */
+.login-card, .gen-box { background: rgba(0, 20, 40, 0.8); border: 1px solid var(--primary); padding: 3rem; backdrop-filter: blur(10px); width: 400px; }
+.interface-grid { display: grid; grid-template-columns: 300px 1fr 300px; width: 100%; height: 90vh; gap: 10px; padding: 10px; box-sizing: border-box; }
+.console { background: rgba(0,0,0,0.5); height: 80%; overflow: hidden; font-size: 10px; padding: 5px; border: 1px solid var(--glass); }
+
+/* Buttons & Inputs */
+input { width: 100%; background: #000; border: 1px solid var(--primary); color: var(--primary); padding: 10px; margin-top: 10px; }
+.action-btn { width: 100%; padding: 15px; background: var(--primary); border: none; cursor: pointer; font-weight: bold; margin-top: 10px; }
+.pink { background: var(--accent); }
+.green { background: #25D366; color: white; }
+
+/* Visuals */
+.scanlines { position: fixed; inset: 0; pointer-events: none; z-index: 100; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%); background-size: 100% 4px; }
+.card-frame { border: 1px dashed var(--accent); padding: 20px; margin-top: 20px; text-transform: uppercase; }
